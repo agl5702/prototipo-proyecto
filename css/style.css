@@ -2,6 +2,9 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-image: url(../img/fondop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
@@ -14,8 +17,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0px 5px rgba(0, 0, 0, .5);
-    background: #C8E4B2;
+    box-shadow: 0px 1px rgba(255, 255, 255, 0.808);
+    background: transparent;
 }
 
 header nav {
@@ -50,16 +53,7 @@ nav h1 {
     margin: 0px 50px;
     text-align: center;
     align-items: center;
-}
-
-.buscar input {
-    margin-top: 10px;
-    width: 100%;
-    height: 30px;
-    border-radius: 2px;
     justify-content: center;
-    border: 2px solid rgba(153, 153, 153, 0.5);
-    outline: none;
 }
 
 .buscar ul {
@@ -81,12 +75,12 @@ nav h1 {
     margin: 0px 20px;
     display: flex;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: #000;
 }
 
 .container header button {
-    background: #9ED2BE;
+    background: #ffff69;
     outline: none;
     border: 1px solid rgba(7, 88, 22, 0.747);
     border-radius: 3px;
@@ -98,95 +92,54 @@ nav h1 {
 }
 
 .container header button:hover {
-    background: #7EAA92;
+    background: #ffffff;
 }
 
 .buscar li a:hover {
-    text-decoration: underline;
-}
-
-.banner {
-    margin: 20px 20px;
-    position: relative;
-    overflow: hidden;
-    width: 45%;
-}
-
-.banner-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    flex: 0 0 100%;
-    width: 45%;
-}
-
-.slide img {
-    background-size: cover;
-    border-radius: 10px;
-    box-shadow: 5px 5px rgba(0, 0, 0, .5);
-}
-
-.caja {
-    margin: left;
-    width: 390px;
-    background-color: rgba(0, 0, 0, .5);
-    animation-name: aumento-img1;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-}
-
-section {
-    display: flex;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    line-height: 3.5;
+    padding-bottom: 5px;
 }
 
 .seccion1 {
-    font-size: 40px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-items: center;
+    flex-direction: row;
+}
+
+.seccion1 section {
+    width: 100%;
+}
+
+.cajas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-.seccion1 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 10px 20px;
+@keyframes aumento-cajas {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
 }
 
-section button {
+.cajas img {
     border-radius: 5px;
-    box-shadow: 3px 3px rgba(0, 0, 0, .5);
-    background-color: #FFD9B7;
-    color: rgb(14, 14, 14);
-    text-shadow: .5px .5px rgb(255, 255, 255);
+    box-shadow: 10px 10px rgba(0, 0, 0, .6);
+    margin: 25px;
+    width: 300px;
+    height: 400px;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    width: 130px;
-    padding: 20px;
-    animation-name: movimiento-boton;
+}
+
+.cajas img:hover {
+    animation-name: aumento-cajas;
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-@keyframes aumento-img1 {
-    0% {
-        scale: 1;
-    }
-    100% {
-        scale: 1.01;
-    }
-}
-
-@keyframes movimiento-boton {
-    0% {
-        scale: 1.1;
-    }
-    100% {
-        scale: 1;
-    }
 }
