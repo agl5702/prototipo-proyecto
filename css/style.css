@@ -76,11 +76,12 @@ nav h1 {
     display: flex;
     text-decoration: none;
     font-size: 20px;
+    font-weight: 500;
     color: #000;
 }
 
 .container header button {
-    background: #ffff69;
+    background: #fdb475;
     outline: none;
     border: 1px solid rgba(7, 88, 22, 0.747);
     border-radius: 3px;
@@ -108,6 +109,10 @@ nav h1 {
 }
 
 .seccion1 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -142,4 +147,18 @@ nav h1 {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+.seccion1 section h2 {
+    margin: 20px 100px;
+    color: #070707bf;
+    font-family: 'Lilita One';
+    text-transform: capitalize;
+    font-size: 55px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+.seccion1 .deporte {
+    color: #e68c3d;
+    text-shadow: 2px 2px rgba(7, 7, 7, 0.7);
 }
